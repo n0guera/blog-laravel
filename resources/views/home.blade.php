@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,28 @@
     <title>Homepage</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
-    
+
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-white shadow-md py-4">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <a href="/">
+                <h1 class="text-xl font-bold">Blog</h1>
+            </a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="/about">About us</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container mx-auto mt-10 px-6 text-center">
+        <h2 class="text-3xl font-bold">Welcome to this Blog!</h2>
+        <p class="mt-4 text-lg text-gray-600">Discover amazing articles, tutorials and get in touch.</p>
+    </main>
+    <footer class="mt-10 py-6 bg-white text-center shadow-md">
+        <p class="text-gray-600">&copy; 2025 Blog. All rights reserved.</p>
+    </footer>
 </body>
+
 </html>
