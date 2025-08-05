@@ -12,13 +12,13 @@
 <body class="bg-gray-100 text-gray-900">
     <header class="bg-white shadow-md py-4">
         <div class="container mx-auto flex justify-between items-center px-6">
-            <a href="/">
+            <a href="{{ route('home') }}">
                 <h1 class="text-xl font-bold">Blog</h1>
             </a>
             <nav>
                 <ul class="flex space-x-6">
-                    <li><a href="/about">About us</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="{{ route('about') }}">About us</a></li>
+                    <li><a href="{{ route('contact') }}">Contact</a></li>
                 </ul>
             </nav>
         </div>
