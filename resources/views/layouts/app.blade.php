@@ -21,9 +21,7 @@
             </ul>
         </nav>
     </header>
-    <main class="container mx-auto mt-10 px-6 text-center">
-        @yield('content')
-    </main>
+    @yield('content')
     <footer class="mt-10 py-6 bg-white text-center shadow-md">
         <p class="text-gray-600">&copy; 2025 Blog. All rights reserved.</p>
     </footer>
