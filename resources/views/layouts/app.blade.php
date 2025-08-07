@@ -9,19 +9,17 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-gray-100 text-gray-900">
-    <header class="bg-white shadow-md py-4">
-        <div class="container mx-auto flex justify-between items-center px-6">
-            <a href="{{ route('home') }}">
-                <h1 class="text-xl font-bold">Blog</h1>
-            </a>
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="{{ route('about') }}">About us</a></li>
-                    <li><a href="{{ route('contact') }}">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+<body class="bg-gray-100">
+    <header class="container flex justify-between items-center bg-white shadow-md p-4 rounded-lg mt-4 mx-auto">
+        <a href="{{ route('home') }}">
+            <h1 class="text-2xl font-bold">Blog</h1>
+        </a>
+        <nav>
+            <ul class="flex space-x-4">
+                <li><a href="{{ route('about') }}" class="text-gray-600 hover:text-gray-800">About us</a></li>
+                <li><a href="{{ route('contact') }}" class="text-gray-600 hover:text-gray-800">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <main class="container mx-auto mt-10 px-6 text-center">
         @yield('content')
