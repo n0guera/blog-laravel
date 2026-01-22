@@ -14,7 +14,7 @@
             <article class="flex gap-4 border-b border-gray-200 pb-4">
                 <img src="{{ asset('https://placehold.co/150') }}" alt="Post Image" class="w-32 h-32 object-cover rounded">
                 <div>
-                    <h3 class="text-lg font-semibold"><a href="#" class="hover:underline">{{ $post->title }}</a></h3>
+                    <h3 class="text-lg font-semibold"><a href="{{ route('post.show', $post) }}" class="hover:underline">{{ $post->title }}</a></h3>
                     <p class="text-gray-600">{{ substr($post->text, 0, 50) }}...</p>
                 </div>
             </article>
