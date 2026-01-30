@@ -21,6 +21,9 @@
             </ul>
         </nav>
     </header>
+    @isset($slot)
+    {{ $slot }}
+    @endisset
     @yield('content')
     <footer class="mt-10 py-6 bg-white text-center shadow-md">
         <p class="text-gray-600">&copy; 2025 Blog. All rights reserved.</p>
