@@ -10,20 +10,28 @@
 </head>
 
 <body class="bg-gray-100 dark:bg-gray-900">
-    <header
-        class="container flex justify-between items-center bg-white dark:bg-gray-800 shadow-md p-4 rounded-lg mt-4 mx-auto">
-        <a href="{{ route('home') }}">
-            <h1 class="text-2xl font-bold dark:text-gray-200">Blog</h1>
-        </a>
-        <nav>
-            <ul class="flex space-x-4">
-                <li><a href="{{ route('about') }}" class="text-gray-600 hover:text-gray-800 dark:text-gray-200">About
-                        us</a></li>
-                <li><a href="{{ route('contact') }}"
-                        class="text-gray-600 hover:text-gray-800 dark:text-gray-200">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    @if (isset($header))
+        <header class="bg-white dark:bg-gray-800 shadow">
+            {{ $header }}
+        </header>
+    @else
+        <header
+            class="container flex justify-between items-center bg-white dark:bg-gray-800 shadow-md p-4 rounded-lg mt-4 mx-auto">
+            <a href="{{ route('home') }}">
+                <h1 class="text-2xl font-bold dark:text-gray-200">Blog</h1>
+            </a>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="{{ route('about') }}"
+                            class="text-gray-600 hover:text-gray-800 dark:text-gray-200">About
+                            us</a></li>
+                    <li><a href="{{ route('contact') }}"
+                            class="text-gray-600 hover:text-gray-800 dark:text-gray-200">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    @endif
+
     @isset($slot)
         {{ $slot }}
     @endisset
