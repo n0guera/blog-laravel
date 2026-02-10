@@ -12,6 +12,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 ">
+                    <a href="{{ route('categories.create') }}" class="dark:text-gray-200">Add new category</a>
                     <table>
                         <thead>
                             <tr>
@@ -26,6 +27,12 @@
                                     <td>
                                         <a href=" {{ route('categories.edit', $category) }}"
                                             class="dark:text-gray-400 hover:underline">Edit</a>
+                                        <form method="POST" action="{{ route('categories.destroy', $category) }}">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" onclick="return confirm('Are you sure?')"
+                                                class="hover:underline dark:text-red-400">Delete</button>
+                                        </form>
                                     </td>
                                 </tr>
                             @endforeach
