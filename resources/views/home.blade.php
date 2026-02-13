@@ -30,7 +30,7 @@
                 @foreach ($categories as $category)
                     <li>
                         <a href="/?category_id={{ $category->id }}"
-                            class="text-gray-600 dark:text-gray-400 hover:text-gray-800">
+                            class="text-gray-600 dark:text-gray-400 hover:text-gray-300">
                             {{ $category->name }}
                         </a>
                     </li>
