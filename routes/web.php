@@ -25,7 +25,10 @@ Route::middleware('auth')->group(function () {
         return view('dashboard');
     })->middleware(['auth', 'verified'])->name('dashboard');
 
-    Route::resource('categories', CategoryController::class)->middleware(IsAdminMiddleware::class);
+    Route::middleware(IsAdminMiddleware::class)->group(function () {
+        Route::resource('categories', CategoryController::class);
+        Route::resource('posts', PostController::class);
+    });
 });
 
 require __DIR__ . '/auth.php';
