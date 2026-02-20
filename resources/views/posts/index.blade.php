@@ -25,7 +25,7 @@
                             @foreach ($posts as $post)
                                 <tr>
                                     <td class="dark:text-gray-200"> {{ $post->title }}</td>
-                                    <td></td>
+                                    <td>{{ $post->category->name }}</td>
                                     <td>
                                         <a href=" {{ route('posts.edit', $post) }}"
                                             class="dark:text-gray-400 hover:underline">Edit</a>
