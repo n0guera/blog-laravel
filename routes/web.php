@@ -13,9 +13,6 @@ Route::view('about', 'about')->name('about');
 Route::view('contact', 'contact')->name('contact');
 Route::view('article', 'article')->name('article');
 
-Route::get('posts/{post}', [PostController::class, 'show'])
-    ->name('post.show');
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -30,5 +27,8 @@ Route::middleware('auth')->group(function () {
         Route::resource('posts', PostController::class);
     });
 });
+
+Route::get('posts/{post}', [PostController::class, 'show'])
+    ->name('posts.show');
 
 require __DIR__ . '/auth.php';
