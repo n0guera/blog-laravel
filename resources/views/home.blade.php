@@ -15,7 +15,7 @@
                         <img src="{{ asset('https://placehold.co/150') }}" alt="Post Image"
                             class="w-32 h-32 object-cover rounded">
                         <div>
-                            <h3 class="text-lg font-semibold"><a href="{{ route('post.show', $post) }}"
+                            <h3 class="text-lg font-semibold"><a href="{{ route('posts.show', $post) }}"
                                     class="dark:text-gray-200 hover:underline">{{ $post->title }}</a></h3>
                             <p class="text-gray-600 dark:text-gray-400">{{ substr($post->text, 0, 50) }}...</p>
                         </div>
@@ -30,7 +30,7 @@
                 @foreach ($categories as $category)
                     <li>
                         <a href="/?category_id={{ $category->id }}"
-                            class="text-gray-600 dark:text-gray-400 hover:text-gray-800">
+                            class="text-gray-600 dark:text-gray-400 hover:text-gray-300">
                             {{ $category->name }}
                         </a>
                     </li>
